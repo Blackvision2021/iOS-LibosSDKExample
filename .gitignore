@@ -76,3 +76,5 @@ iOSInjectionProject/
 video.zip
 
 *.xcuserstate
+*.xcodeproj/
+*.xcuserstate
