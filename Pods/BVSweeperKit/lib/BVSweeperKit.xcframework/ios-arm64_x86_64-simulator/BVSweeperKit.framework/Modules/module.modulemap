@@ -1,0 +1,11 @@
+framework module BVSweeperKit {
+  umbrella header "BVSweeperKit.h"
+
+  export *
+  module * { export * }
+}
+
+module BVSweeperKit.Swift {
+    header "BVSweeperKit-Swift.h"
+    requires objc
+}

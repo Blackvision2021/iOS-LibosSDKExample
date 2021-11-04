@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WifiConfigApController" customModule="Libos" customModuleProvider="target">
+            <connections>
+                <outlet property="currentSsid" destination="LxE-1s-JNj" id="6ZE-qL-YaM"/>
+                <outlet property="passwordTF" destination="EYQ-wL-7dH" id="G5j-fC-My0"/>
+                <outlet property="qrCodeTF" destination="mA3-8P-O7d" id="3Gb-aG-mWw"/>
+                <outlet property="ssidTF" destination="H9G-0g-5R3" id="eNJ-Qc-a3H"/>
+                <outlet property="view" destination="CO3-rc-3aJ" id="lAp-0A-ZdI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="CO3-rc-3aJ">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wifi名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvs-nv-7ki">
+                    <rect key="frame" x="56" y="185" width="61" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wifi密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raA-Hv-hvk">
+                    <rect key="frame" x="56" y="236" width="61" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcI-WW-8JD">
+                    <rect key="frame" x="166" y="323.5" width="82" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="开始配网"/>
+                    <connections>
+                        <action selector="clickConfig" destination="-1" eventType="touchUpInside" id="k5W-uv-XIb"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="APP-TEST1" borderStyle="roundedRect" placeholder="wifi名称内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9G-0g-5R3">
+                    <rect key="frame" x="137" y="178.5" width="257" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客户二维码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xP7-cQ-1Rx">
+                    <rect key="frame" x="30" y="134" width="87" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Blackvision1" borderStyle="roundedRect" placeholder="wif密码内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EYQ-wL-7dH">
+                    <rect key="frame" x="137" y="229.5" width="257" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="libos-x580t" borderStyle="roundedRect" placeholder="二维码内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mA3-8P-O7d">
+                    <rect key="frame" x="137" y="127.5" width="257" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前wifi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxE-1s-JNj">
+                    <rect key="frame" x="176.5" y="54" width="61" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="q4I-q4-dQV"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="q4I-q4-dQV" firstAttribute="trailing" secondItem="mA3-8P-O7d" secondAttribute="trailing" constant="20" id="7bm-13-Rsj"/>
+                <constraint firstItem="xP7-cQ-1Rx" firstAttribute="top" secondItem="q4I-q4-dQV" secondAttribute="top" constant="90" id="8Lp-ga-Weo"/>
+                <constraint firstItem="EYQ-wL-7dH" firstAttribute="leading" secondItem="mA3-8P-O7d" secondAttribute="leading" id="8Xd-Gp-EBQ"/>
+                <constraint firstItem="EYQ-wL-7dH" firstAttribute="trailing" secondItem="mA3-8P-O7d" secondAttribute="trailing" id="9Ru-OT-aKG"/>
+                <constraint firstItem="LxE-1s-JNj" firstAttribute="top" secondItem="q4I-q4-dQV" secondAttribute="top" constant="10" id="H8c-u3-rJe"/>
+                <constraint firstItem="mvs-nv-7ki" firstAttribute="trailing" secondItem="xP7-cQ-1Rx" secondAttribute="trailing" id="KJX-RF-TUH"/>
+                <constraint firstItem="mvs-nv-7ki" firstAttribute="top" secondItem="xP7-cQ-1Rx" secondAttribute="bottom" constant="30" id="KxW-mA-ABx"/>
+                <constraint firstItem="raA-Hv-hvk" firstAttribute="trailing" secondItem="mvs-nv-7ki" secondAttribute="trailing" id="NIo-hQ-vkz"/>
+                <constraint firstItem="mA3-8P-O7d" firstAttribute="leading" secondItem="xP7-cQ-1Rx" secondAttribute="trailing" constant="20" id="NY4-wq-Bea"/>
+                <constraint firstItem="EYQ-wL-7dH" firstAttribute="centerY" secondItem="raA-Hv-hvk" secondAttribute="centerY" id="Qs9-gr-5O2"/>
+                <constraint firstItem="LxE-1s-JNj" firstAttribute="centerX" secondItem="CO3-rc-3aJ" secondAttribute="centerX" id="Vcn-SU-P99"/>
+                <constraint firstItem="mA3-8P-O7d" firstAttribute="trailing" secondItem="H9G-0g-5R3" secondAttribute="trailing" id="Vcx-qO-9UA"/>
+                <constraint firstItem="raA-Hv-hvk" firstAttribute="top" secondItem="mvs-nv-7ki" secondAttribute="bottom" constant="30" id="bnp-ru-jfX"/>
+                <constraint firstItem="mA3-8P-O7d" firstAttribute="centerY" secondItem="xP7-cQ-1Rx" secondAttribute="centerY" id="jT7-se-qCp"/>
+                <constraint firstItem="H9G-0g-5R3" firstAttribute="centerY" secondItem="mvs-nv-7ki" secondAttribute="centerY" id="nEw-aj-4Fh"/>
+                <constraint firstItem="NcI-WW-8JD" firstAttribute="centerX" secondItem="CO3-rc-3aJ" secondAttribute="centerX" id="nyp-5U-iid"/>
+                <constraint firstItem="xP7-cQ-1Rx" firstAttribute="leading" secondItem="q4I-q4-dQV" secondAttribute="leading" constant="30" id="tNZ-Sb-RJ0"/>
+                <constraint firstItem="H9G-0g-5R3" firstAttribute="leading" secondItem="mA3-8P-O7d" secondAttribute="leading" id="thY-8w-1NV"/>
+                <constraint firstItem="NcI-WW-8JD" firstAttribute="top" secondItem="EYQ-wL-7dH" secondAttribute="bottom" constant="60" id="zhn-7o-Iy9"/>
+            </constraints>
+            <point key="canvasLocation" x="152" y="162"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
