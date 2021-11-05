@@ -45,7 +45,7 @@ class BVMapController: UIViewController {
         
         let mode = getMapMode()
         
-        let height = UIApplication.shared.statusBarFrame.height
+        let height = AppDelegate.default.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 20
         
         mapView = BVSweeperMapView.init(mode: mode, emptyView: emptyView)
         mapView.backgroundColor = .systemGray

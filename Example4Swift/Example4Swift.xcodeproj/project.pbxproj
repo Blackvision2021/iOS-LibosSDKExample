@@ -175,12 +175,12 @@
 		84C0AFEB2733EBB600C8F596 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				84C0AFEC2733EBB600C8F596 /* BVPreViewMapController.swift */,
-				84C0AFED2733EBB600C8F596 /* BVShareMapController.swift */,
-				84C0AFEE2733EBB600C8F596 /* BVRoomController.swift */,
-				84C0AFEF2733EBB600C8F596 /* BVAreaController.swift */,
-				84C0AFF02733EBB600C8F596 /* BVForbiddenController.swift */,
 				84C0AFF12733EBB600C8F596 /* BVMapController.swift */,
+				84C0AFF02733EBB600C8F596 /* BVForbiddenController.swift */,
+				84C0AFEF2733EBB600C8F596 /* BVAreaController.swift */,
+				84C0AFEE2733EBB600C8F596 /* BVRoomController.swift */,
+				84C0AFED2733EBB600C8F596 /* BVShareMapController.swift */,
+				84C0AFEC2733EBB600C8F596 /* BVPreViewMapController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";

@@ -42,7 +42,7 @@
     
     BVSweeperMapViewMode mode = [self getMapMode];
     
-    CGFloat height = UIApplication.sharedApplication.statusBarFrame.size.height;
+    CGFloat height = [AppDelegate getInstance].window.windowScene.statusBarManager.statusBarFrame.size.height;
     
     BVSweeperMapView *mapView = [[BVSweeperMapView alloc]initWithMode:mode emptyView:emptyView];
     mapView.backgroundColor = UIColor.grayColor;

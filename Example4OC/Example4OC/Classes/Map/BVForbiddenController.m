@@ -60,19 +60,34 @@
 }
 
 -(void)addWall {
-    
+    if (![self.mapView addVirtualWall]) {
+        [self log:@"虚拟墙到达上限"];
+        [BVHUD showInfo:@"虚拟墙到达上限"];
+    }
 }
 
 -(void)addZone {
-    
+    if (![self.mapView addForbiddenZone]) {
+        [self log:@"禁区到达上限"];
+        [BVHUD showInfo:@"禁区到达上限"];
+    }
 }
 
 -(void)reset {
-    
+    [self log:@"恢复数据"];
+    [self.mapView resetRestrictedToOriginal];
 }
 
 -(void)getData {
+    if (![self.mapView canSendVirtualWallAndForbiddenZone]) {
+        [self log:@"有虚拟墙或者禁区设置在了设备或扫地机附近"];
+        return;
+    }
     
+    NSArray *wall = [self.mapView getVirtualWall];
+    NSArray *zone = [self.mapView getForbiddenZone];
+    
+    [self log:[NSString stringWithFormat:@"虚拟墙： %@ \n禁区： %@",wall, zone]];
 }
 
 @end

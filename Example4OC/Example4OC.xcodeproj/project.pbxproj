@@ -132,8 +132,8 @@
 		84C0B0322733ED7400C8F596 /* TestConfig */ = {
 			isa = PBXGroup;
 			children = (
-				84C0B0332733ED7400C8F596 /* BVHUD.m */,
 				84C0B0342733ED7400C8F596 /* BVHUD.h */,
+				84C0B0332733ED7400C8F596 /* BVHUD.m */,
 			);
 			path = TestConfig;
 			sourceTree = "<group>";
@@ -142,9 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				84C0B0362733ED7400C8F596 /* BVRegular.h */,
-				84C0B0372733ED7400C8F596 /* UIButton+UIButton.m */,
-				84C0B0382733ED7400C8F596 /* UIButton+UIButton.h */,
 				84C0B0392733ED7400C8F596 /* BVRegular.m */,
+				84C0B0382733ED7400C8F596 /* UIButton+UIButton.h */,
+				84C0B0372733ED7400C8F596 /* UIButton+UIButton.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -181,18 +181,18 @@
 		84C0B0422733ED7500C8F596 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				84C0B0432733ED7500C8F596 /* BVRoomController.m */,
-				84C0B0442733ED7500C8F596 /* BVAreaController.m */,
-				84C0B0452733ED7500C8F596 /* BVPreViewMapController.h */,
-				84C0B0462733ED7500C8F596 /* BVForbiddenController.h */,
 				84C0B0472733ED7500C8F596 /* BVMapController.h */,
-				84C0B0482733ED7500C8F596 /* BVShareMapController.m */,
-				84C0B0492733ED7500C8F596 /* BVAreaController.h */,
-				84C0B04A2733ED7500C8F596 /* BVRoomController.h */,
-				84C0B04B2733ED7500C8F596 /* BVForbiddenController.m */,
-				84C0B04C2733ED7500C8F596 /* BVPreViewMapController.m */,
-				84C0B04D2733ED7500C8F596 /* BVShareMapController.h */,
 				84C0B04E2733ED7500C8F596 /* BVMapController.m */,
+				84C0B0462733ED7500C8F596 /* BVForbiddenController.h */,
+				84C0B04B2733ED7500C8F596 /* BVForbiddenController.m */,
+				84C0B0492733ED7500C8F596 /* BVAreaController.h */,
+				84C0B0442733ED7500C8F596 /* BVAreaController.m */,
+				84C0B04A2733ED7500C8F596 /* BVRoomController.h */,
+				84C0B0432733ED7500C8F596 /* BVRoomController.m */,
+				84C0B04D2733ED7500C8F596 /* BVShareMapController.h */,
+				84C0B0482733ED7500C8F596 /* BVShareMapController.m */,
+				84C0B0452733ED7500C8F596 /* BVPreViewMapController.h */,
+				84C0B04C2733ED7500C8F596 /* BVPreViewMapController.m */,
 			);
 			path = Map;
 			sourceTree = "<group>";

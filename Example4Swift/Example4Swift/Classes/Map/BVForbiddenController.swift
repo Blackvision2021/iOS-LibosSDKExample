@@ -88,6 +88,6 @@ extension BVForbiddenController {
         let wall = self.mapView.getVirtualWall()
         let zone = self.mapView.getForbiddenZone()
         
-        self.log("虚拟墙： \(wall) \n 禁区： \(zone)")
+        self.log("虚拟墙： \(wall) \n禁区： \(zone)")
     }
 }

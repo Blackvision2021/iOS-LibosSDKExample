@@ -15,17 +15,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSString *)getNavTitle {
+    return @"划区";
 }
-*/
+
+- (void)initView {
+    [super initView];
+    
+    [self.mapView changeState:BVSweeperMapViewStatePlanningZoneEditState];
+    
+    UIButton *addZoneBtn = [UIButton buttonWith:@"添加划区"];
+    [self.view addSubview:addZoneBtn];
+    [addZoneBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.logView.mas_bottom).offset(10);
+        make.right.equalTo(self.view).offset(-40);
+    }];
+    [addZoneBtn addTarget:self action:@selector(addZone) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *getDataBtn = [UIButton buttonWith:@"获取数据"];
+    [self.view addSubview:getDataBtn];
+    [getDataBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(addZoneBtn.mas_bottom).offset(10);
+        make.right.equalTo(self.view).offset(-40);
+    }];
+    [getDataBtn addTarget:self action:@selector(getData) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)addZone {
+    if (![self.mapView addPlanningZone]) {
+        [self log:@"划区到达上限"];
+        [BVHUD showInfo:@"划区到达上限"];
+    }
+}
+
+-(void)getData {
+    NSArray *zone = [self.mapView getPlanningZone];
+    [self log:[NSString stringWithFormat:@"划区: %@", zone]];
+}
 
 @end
