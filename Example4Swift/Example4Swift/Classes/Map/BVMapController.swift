@@ -57,6 +57,7 @@ class BVMapController: UIViewController {
         }
         
         logView = UITextView.init()
+        logView.isEditable = false
         self.view.addSubview(logView)
         logView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()

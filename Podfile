@@ -11,7 +11,9 @@ target 'Example4Swift' do
   
 #  pod 'BVCommon', :path => '../Libos/BVCommon'
 #  pod 'BVSweeperKit', :path => '../Libos/BVSweeperKit'
-  pod 'BVSweeperKit', '0.2.0'
+  
+#  pod 'BVCommon', '0.1.2'
+  pod 'BVSweeperKit', '0.2.3'
   
   pod 'IQKeyboardManagerSwift'
   pod 'SVProgressHUD'
@@ -26,7 +28,9 @@ target 'Example4OC' do
   
 #  pod 'BVCommon', :path => '../Libos/BVCommon'
 #  pod 'BVSweeperKit', :path => '../Libos/BVSweeperKit'
-  pod 'BVSweeperKit', '0.2.0'
+  
+#  pod 'BVCommon', '0.1.2'
+  pod 'BVSweeperKit', '0.2.3'
   
   pod 'IQKeyboardManager'
   pod 'SVProgressHUD'

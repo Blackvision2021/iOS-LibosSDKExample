@@ -54,6 +54,7 @@
     }];
     
     UITextView *logView = [[UITextView alloc]init];
+    logView.editable = NO;
     [self.view addSubview:logView];
     [logView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
@@ -61,8 +62,11 @@
         make.height.mas_equalTo(150);
     }];
     
-    NSData *data = [BVRegular loadData];
-    BVSweeperMapData *model = [BVSweeperMapData modelWithData:data];
+//    NSData *data = [BVRegular loadData];
+//    BVSweeperMapData *model = [BVSweeperMapData modelWithData:data];
+    
+    NSString *data = [BVRegular loadJsonString];
+    BVSweeperMapData *model = [BVSweeperMapData modelWithJson:data];
     [mapView reciveMapData:model];
     
     self.mapView = mapView;

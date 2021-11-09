@@ -17,4 +17,10 @@
     return gData;
 }
 
++(NSString *)loadJsonString {
+    NSURL *bundle = [[NSBundle mainBundle] URLForResource:@"map" withExtension:@"txt"];
+    NSString *str = [NSString stringWithContentsOfURL:bundle encoding:NSUTF8StringEncoding error:nil];
+    return str;
+}
+
 @end

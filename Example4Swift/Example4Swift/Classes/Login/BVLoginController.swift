@@ -34,7 +34,7 @@ extension BVLoginController {
             return
         }
         BVHUD.showLoading("正在登录")
-        BVClient.initSdk(appKey: appId, appSecret: secret)
+        BVClient.initSdk(appId, secret)
         BVClient.shared.login(account: userName, region: .dev) { result in
             if result {
                 print("跳转")

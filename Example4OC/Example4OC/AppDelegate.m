@@ -9,6 +9,7 @@
 #import "BVLoginController.h"
 #import <IQKeyboardManager.h>
 #import "ViewController.h"
+#import <BVCommon/BVCommon-Swift.h>
 
 @interface AppDelegate ()
 
@@ -36,6 +37,8 @@
 -(void)initSDK {
     IQKeyboardManager.sharedManager.enable = YES;
     IQKeyboardManager.sharedManager.shouldResignOnTouchOutside = YES;
+    
+    [BVClient setDebugMode:YES];
 }
 
 -(void)enterLogin {

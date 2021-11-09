@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func initsdk() {
-        BVClient.setDebugMode(debug: true)
+        BVClient.setDebugMode(true)
         
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true

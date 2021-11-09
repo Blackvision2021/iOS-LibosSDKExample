@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8480096A273A209F00CC0E51 /* json.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84800969273A209F00CC0E51 /* json.txt */; };
 		84C0B01A2733ECB000C8F596 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C0B0192733ECB000C8F596 /* AppDelegate.m */; };
 		84C0B0252733ECB100C8F596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C0B0242733ECB100C8F596 /* Assets.xcassets */; };
 		84C0B0282733ECB100C8F596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C0B0262733ECB100C8F596 /* LaunchScreen.storyboard */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		0CE2E8FFF7CD07E8926A8B57 /* Pods-Example4OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example4OC.release.xcconfig"; path = "Target Support Files/Pods-Example4OC/Pods-Example4OC.release.xcconfig"; sourceTree = "<group>"; };
 		0D065B919458B7D781DF6D02 /* Pods_Example4OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example4OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84800969273A209F00CC0E51 /* json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.txt; sourceTree = "<group>"; };
 		84C0B0152733ECB000C8F596 /* Example4OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example4OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C0B0182733ECB000C8F596 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84C0B0192733ECB000C8F596 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				84C0B03E2733ED7400C8F596 /* map.txt */,
 				84C0B03F2733ED7400C8F596 /* compr_map.txt */,
+				84800969273A209F00CC0E51 /* json.txt */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -170,10 +173,10 @@
 		84C0B0402733ED7500C8F596 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				84C0B0532733ED7500C8F596 /* ViewController.h */,
 				84C0B0412733ED7500C8F596 /* ViewController.m */,
 				84C0B0422733ED7500C8F596 /* Map */,
 				84C0B04F2733ED7500C8F596 /* Login */,
-				84C0B0532733ED7500C8F596 /* ViewController.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				84C0B0592733ED7500C8F596 /* compr_map.txt in Resources */,
 				84C0B0282733ECB100C8F596 /* LaunchScreen.storyboard in Resources */,
 				84C0B0622733ED7500C8F596 /* BVLoginController.xib in Resources */,
+				8480096A273A209F00CC0E51 /* json.txt in Resources */,
 				84C0B0252733ECB100C8F596 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

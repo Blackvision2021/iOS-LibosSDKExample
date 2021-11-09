@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(NSData *)loadData;
 
++(NSString *)loadJsonString;
+
 @end
 
 NS_ASSUME_NONNULL_END
