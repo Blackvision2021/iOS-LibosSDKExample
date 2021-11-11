@@ -5,12 +5,12 @@ use_frameworks!
 
 workspace 'LibosSDKExample.xcworkspace'
 
-#Example4OC
+#Example4Swift
 target 'Example4Swift' do
   project 'Example4Swift/Example4Swift.xcodeproj'
   
-#  pod 'BVCommon', :path => '../Libos/BVCommon'
-#  pod 'BVSweeperKit', :path => '../Libos/BVSweeperKit'
+  pod 'BVCommon', :path => '../Libos/BVCommon'
+  pod 'BVSweeperKit', :path => '../Libos/BVSweeperKit'
   
 #  pod 'BVCommon', '0.1.2'
 #  pod 'BVSweeperKit', '0.2.3'

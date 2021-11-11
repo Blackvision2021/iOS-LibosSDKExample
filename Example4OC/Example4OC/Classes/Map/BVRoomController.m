@@ -77,6 +77,22 @@
     }];
     [fengeOKBtn addTarget:self action:@selector(fengeOk) forControlEvents:UIControlEventTouchUpInside];
     
+    UIButton *getRoomInfoBtn = [self createButton:@"获取房间属性"];
+    [self.view addSubview:getRoomInfoBtn];
+    [getRoomInfoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(fengeOKBtn.mas_bottom).offset(10);
+        make.left.equalTo(self.view).offset(10);
+    }];
+    [getRoomInfoBtn addTarget:self action:@selector(getRoomInfo) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *adjustBtn = [self createButton:@"设置房间属性"];
+    [self.view addSubview:adjustBtn];
+    [adjustBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(getRoomInfoBtn);
+        make.left.equalTo(getRoomInfoBtn.mas_right).offset(10);
+    }];
+    [adjustBtn addTarget:self action:@selector(tryAdjustRoom) forControlEvents:UIControlEventTouchUpInside];
+    
     [self log:@"选择房间，再选择操作"];
     [self log:@"分割房间之后再点击<获取分割点>按钮"];
     
@@ -139,6 +155,29 @@
     [self log:[NSString stringWithFormat:@"合并房间  房间号：%@", roomIds]];
     
     [self recover];
+}
+
+-(void)getRoomInfo {
+    NSArray<BVDrawMapRoom *> * rooms = [self.mapView getAllRoomInfo];
+    NSMutableString *str = [NSMutableString string];
+    [str appendString:@"当前房间属性：\n"];
+    for (BVDrawMapRoom *item in rooms) {
+        [str appendFormat:@"房间名称：%@ %@\n", item.roomName, item.roomProperty];
+    }
+    [self log:str];
+}
+
+-(void)tryAdjustRoom {
+    NSInteger no = [self.mapView getCheckRoomIds].firstObject.integerValue;
+    [self.mapView adjustRoomPropertyWith:no CleanTimes:nil FanLevel:[NSNumber numberWithInt:2] WaterLevel:nil];
+    NSArray<BVDrawMapRoom *> * rooms = [self.mapView adjustRoomPropertyWith:no CleanTimes:[NSNumber numberWithInt:2] FanLevel:nil WaterLevel:nil];
+    
+    NSMutableString *str = [NSMutableString string];
+    [str appendString:@"调整后的房间属性：\n"];
+    for (BVDrawMapRoom *item in rooms) {
+        [str appendFormat:@"房间名称：%@ %@\n", item.roomName, item.roomProperty];
+    }
+    [self log:str];
 }
 
 - (void)mapView:(BVSweeperMapView *)view didCheckRoomCount:(NSInteger)count {
