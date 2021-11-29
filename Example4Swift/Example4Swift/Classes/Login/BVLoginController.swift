@@ -8,7 +8,7 @@
 import UIKit
 import BVCommon
 
-class BVLoginController: UIViewController {
+class BVLoginController: BVBaseController {
     
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var appIdTF: UITextField!
@@ -17,11 +17,6 @@ class BVLoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    deinit {
-        print("销毁")
-    }
-    
 }
 
 extension BVLoginController {
@@ -35,16 +30,25 @@ extension BVLoginController {
         }
         BVHUD.showLoading("正在登录")
         BVClient.initSdk(appId, secret)
-        BVClient.shared.login(account: userName, region: .dev) { result in
-            if result {
-                print("跳转")
-                AppDelegate.default.enterApp()
-            }
-            BVHUD.dismiss()
-        }
+        BVClient.shared.loginDelegate = self
+        BVClient.shared.login(account: userName, region: .dev)
     }
     
     @IBAction func clickTest() {
 
+    }
+}
+
+// MARK: - BVClientLoginDelegate
+extension BVLoginController: BVClientLoginDelegate {
+    func bvClientLoginSuccess() {
+        AppDelegate.default.enterApp()
+        BVHUD.dismiss()
+    }
+    
+    func bvClientLoginFailWith(error: BVError) {
+        print("登录失败：\(error)")
+        BVHUD.showInfo("登录失败")
+        BVHUD.dismiss()
     }
 }

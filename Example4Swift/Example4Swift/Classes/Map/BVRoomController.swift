@@ -31,7 +31,7 @@ extension BVRoomController {
     override func initView() {
         super.initView()
         
-        self.mapView.editRoomDelegate = self
+        self.mapView.roomEditDelegate = self
         
         
         let recoverBtn = UIButton.buttonWith(title: "恢复选择")
@@ -101,7 +101,7 @@ extension BVRoomController {
             return
         }
         let oldName = model.roomName ?? "null"
-        let no = model.no
+        let no = model.roomId
         
         self.log("将房间号： \(no) 原名称：\(oldName) 改名")
         
@@ -139,8 +139,8 @@ extension BVRoomController {
     }
 }
 
-extension BVRoomController: BVSweeperMapViewRoomEditDelegate {
-    func mapView(_ view: BVSweeperMapView, didCheckRoomCount count: Int) {
+extension BVRoomController: BVSweeperBaseMapViewRoomEditDelegate {
+    func mapView(_ view: BVSweeperBaseMapView, didCheckRoomCount count: Int) {
         if count == 0 {
             self.nameBtn.isEnabled = false
             self.fenggeBtn.isEnabled = false

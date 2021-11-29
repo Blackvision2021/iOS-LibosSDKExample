@@ -173,10 +173,10 @@
 		84C0B0402733ED7500C8F596 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				84C0B04F2733ED7500C8F596 /* Login */,
+				84C0B0422733ED7500C8F596 /* Map */,
 				84C0B0532733ED7500C8F596 /* ViewController.h */,
 				84C0B0412733ED7500C8F596 /* ViewController.m */,
-				84C0B0422733ED7500C8F596 /* Map */,
-				84C0B04F2733ED7500C8F596 /* Login */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

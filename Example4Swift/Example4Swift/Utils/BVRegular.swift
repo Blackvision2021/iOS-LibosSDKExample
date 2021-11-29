@@ -10,7 +10,7 @@ import GZIP
 
 class BVRegular: NSObject {
     class func loadData() -> Data?{
-        if let bundle = Bundle.main.url(forResource: "map", withExtension: "txt") {
+        if let bundle = Bundle.main.url(forResource: "compr_map", withExtension: "txt") {
             do {
                 let data = try Data.init(contentsOf: bundle)
                 if let gData = (data as NSData).gzipped() {

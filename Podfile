@@ -9,11 +9,11 @@ workspace 'LibosSDKExample.xcworkspace'
 target 'Example4Swift' do
   project 'Example4Swift/Example4Swift.xcodeproj'
   
-  pod 'BVCommon', :path => '../Libos/BVCommon'
-  pod 'BVSweeperKit', :path => '../Libos/BVSweeperKit'
+#  pod 'BVCommon', :path => '../Libos/BVCommon'
+#  pod 'BVSweeperKit', :path => '../Libos/BVSweeperKit'
   
 #  pod 'BVCommon', '0.1.2'
-#  pod 'BVSweeperKit', '0.2.3'
+  pod 'BVSweeperKit', '0.2.6'
   
   pod 'IQKeyboardManagerSwift'
   pod 'SVProgressHUD'
@@ -26,11 +26,11 @@ end
 target 'Example4OC' do
   project 'Example4OC/Example4OC.xcodeproj'
   
-  pod 'BVCommon', :path => '../Libos/BVCommon'
-  pod 'BVSweeperKit', :path => '../Libos/BVSweeperKit'
+#  pod 'BVCommon', :path => '../Libos/BVCommon'
+#  pod 'BVSweeperKit', :path => '../Libos/BVSweeperKit'
   
 #  pod 'BVCommon', '0.1.2'
-#  pod 'BVSweeperKit', '0.2.3'
+  pod 'BVSweeperKit', '0.2.6'
   
   pod 'IQKeyboardManager'
   pod 'SVProgressHUD'

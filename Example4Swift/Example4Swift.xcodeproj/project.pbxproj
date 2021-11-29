@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7085B0404C0266CFCB956907 /* Pods_Example4Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BCB220341C60E8DD9E0FF0 /* Pods_Example4Swift.framework */; };
+		8480097D2743A9DA00CC0E51 /* BVBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480097C2743A9DA00CC0E51 /* BVBaseController.swift */; };
 		84C0AFAB2733EA4A00C8F596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0AFAA2733EA4A00C8F596 /* AppDelegate.swift */; };
 		84C0AFB42733EA4C00C8F596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C0AFB32733EA4C00C8F596 /* Assets.xcassets */; };
 		84C0AFB72733EA4C00C8F596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C0AFB52733EA4C00C8F596 /* LaunchScreen.storyboard */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		24BCB220341C60E8DD9E0FF0 /* Pods_Example4Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example4Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8480097C2743A9DA00CC0E51 /* BVBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVBaseController.swift; sourceTree = "<group>"; };
 		84C0AFA72733EA4A00C8F596 /* Example4Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example4Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C0AFAA2733EA4A00C8F596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C0AFB32733EA4C00C8F596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +93,13 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
+		8480097E2743AA8E00CC0E51 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
 		84C0AF9E2733EA4A00C8F596 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +148,7 @@
 			children = (
 				84C0AFE32733EBB600C8F596 /* BVHUD.swift */,
 				84C0AFE42733EBB600C8F596 /* BVConfig.swift */,
+				8480097C2743A9DA00CC0E51 /* BVBaseController.swift */,
 			);
 			path = TestConfig;
 			sourceTree = "<group>";
@@ -148,6 +158,7 @@
 			children = (
 				84C0AFEA2733EBB600C8F596 /* ViewController.swift */,
 				84C0AFE62733EBB600C8F596 /* Wifi */,
+				8480097E2743AA8E00CC0E51 /* Device */,
 				84C0AFEB2733EBB600C8F596 /* Map */,
 				84C0AFF22733EBB600C8F596 /* Model */,
 				84C0AFF42733EBB600C8F596 /* Login */,
@@ -337,6 +348,7 @@
 				84C0AFFD2733EBB600C8F596 /* BVConfig.swift in Sources */,
 				84C0B0012733EBB600C8F596 /* BVPreViewMapController.swift in Sources */,
 				84C0B0042733EBB600C8F596 /* BVAreaController.swift in Sources */,
+				8480097D2743A9DA00CC0E51 /* BVBaseController.swift in Sources */,
 				84C0AFFB2733EBB600C8F596 /* BVButton.swift in Sources */,
 				84C0AFAB2733EA4A00C8F596 /* AppDelegate.swift in Sources */,
 				84C0B0022733EBB600C8F596 /* BVShareMapController.swift in Sources */,

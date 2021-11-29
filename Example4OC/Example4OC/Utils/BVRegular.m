@@ -11,7 +11,7 @@
 @implementation BVRegular
 
 +(NSData *)loadData {
-    NSURL *bundle = [[NSBundle mainBundle] URLForResource:@"map" withExtension:@"txt"];
+    NSURL *bundle = [[NSBundle mainBundle] URLForResource:@"json" withExtension:@"txt"];
     NSData *data = [NSData dataWithContentsOfURL:bundle];
     NSData *gData = [data gzippedData];
     return gData;

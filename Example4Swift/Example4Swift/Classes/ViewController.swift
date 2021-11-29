@@ -19,7 +19,7 @@ class Moudle: NSObject {
     }
 }
 
-class ViewController: UIViewController {
+class ViewController: BVBaseController {
     var data: [Moudle] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,10 +51,10 @@ extension ViewController {
         data.append(map)
         
         // 初始化地图样式
-        BVSweeperMapConfig.shared.robotIcon = UIImage.init(named: "icon_扫地机")
-        BVSweeperMapConfig.shared.chargingIcon = UIImage.init(named: "iocn_充电座")
-        BVSweeperMapConfig.shared.deleteIcon = UIImage.init(named: "icon_删除")
-        BVSweeperMapConfig.shared.adjustIcon = UIImage.init(named: "icon_调整大小")
+//        BVSweeperMapConfig.shared.robotIcon = UIImage.init(named: "icon_扫地机")
+//        BVSweeperMapConfig.shared.chargingIcon = UIImage.init(named: "iocn_充电座")
+//        BVSweeperMapConfig.shared.deleteIcon = UIImage.init(named: "icon_删除")
+//        BVSweeperMapConfig.shared.adjustIcon = UIImage.init(named: "icon_调整大小")
     }
     
     func initView() {

@@ -8,7 +8,7 @@
 import UIKit
 import BVSweeperKit
 
-class BVMapController: UIViewController {
+class BVMapController: BVBaseController {
     
     var mapView: BVSweeperMapView!
     var logView: UITextView!
@@ -17,12 +17,6 @@ class BVMapController: UIViewController {
         super.viewDidLoad()
         initView()
     }
-    
-    deinit {
-        print("销毁")
-    }
-    
-    
 }
 
 @objc extension BVMapController {
